@@ -4,6 +4,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
+      <th scope="col">Link</th>
+      <th scope="col">People</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +14,7 @@
         <th scope="row"><%= idx + 1%></th>
         <td><%= bill.name %></td>
         <td><%= link_to 'Go', bill_path(bill) %> </td>
+        <td><%= link_to 'People', bill_people_path(bill) %> </td>
       </tr>
     <% end %>
   </tbody>

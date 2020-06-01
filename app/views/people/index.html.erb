@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1> Add People </h1>
+    </div>
+    <div class="col-auto">
+      <%= link_to 'Done', bill_path(@bill), class: "btn btn-secondary btn-lg"%>
+    </div>
+  </div>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bill.people.each_with_index do |person, idx| %>
+      <tr>
+        <th scope="row"><%= idx + 1%></th>
+        <td><%= person.name %></td>
+      </tr>
+    <% end %>
+
+    <tr>
+      <%= render 'people/form' %>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :bills, only: [:index, :show, :create, :new] do
     resources :items, only: [:create]
     resources :percentages, only: [:create]
+    resources :people, only: [:create, :index]
   end
+
   root 'bills#new'
 end

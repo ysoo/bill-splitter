@@ -1,0 +1,7 @@
+<%= form_with(model: [@bill, @bill.people.build ], local: true) do |form| %>
+  <td><%= form.submit %></td>
+  <td>
+    <%= form.text_field :name, class: "input-group" %>
+  </td>
+
+<% end %>

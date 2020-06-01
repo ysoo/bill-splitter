@@ -2,7 +2,6 @@ class PercentagesController < ApplicationController
   def create
     @bill = Bill.find(params[:bill_id])
     @percentage = @bill.percentages.create(percentage_params)
-    binding.pry
     redirect_to bill_path(@bill)
   end
 

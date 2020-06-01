@@ -1,7 +1,11 @@
 <div class="container-fluid">
-  <p>
-    <strong><h1><%= @bill.name %></h1></strong>
-  </p>
+  <div class="row">
+    <div class="col">
+      <strong><h1><%= @bill.name %></h1></strong>
+    </div>
+     <div class="col-auto"><button type="button" class="btn btn-secondary btn-lg">Calculate</button></div>
+  </div>
+
   <div class="row">
     <div class="col-md-8">  <h5>Items</h5> </div>
     <div class="col-6 col-md-4">    <h5> Percentages </h5> </div>
