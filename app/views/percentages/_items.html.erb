@@ -8,14 +8,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @bill.items.each_with_index do |item, idx| %>
+    <% @bill.percentages.each_with_index do |item, idx| %>
       <tr>
         <th scope="row"><%= idx + 1%></th>
         <td><%= item.name %></td>
         <td><%= item.amount %></td>
       </tr>
     <% end %>
-      <tr><%= render 'items/form' %></tr>
+    <tr>
+       <%= render 'percentages/form' %>
+    </tr>
   </tbody>
 </table>
 </div>

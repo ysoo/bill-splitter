@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_003733) do
+ActiveRecord::Schema.define(version: 2020_06_01_013745) do
 
   create_table "bills", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2020_06_01_003733) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount_cents"
+    t.integer "bill_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "percentages", force: :cascade do |t|
     t.string "name"
     t.integer "amount_cents"
     t.integer "bill_id"

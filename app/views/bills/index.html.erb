@@ -11,6 +11,7 @@
       <tr>
         <th scope="row"><%= idx + 1%></th>
         <td><%= bill.name %></td>
+        <td><%= link_to 'Go', bill_path(bill) %> </td>
       </tr>
     <% end %>
   </tbody>

@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'money-rails', '~>1.12'
+gem 'pry', '~> 0.12.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,6 +54,3 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
