@@ -1,0 +1,13 @@
+ <%= form_with(model: [@bill, @bill.items.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

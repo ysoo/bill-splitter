@@ -3,7 +3,7 @@
     New Bill
   </h2>
 
-  <%= form_with scope: :bill, url: bill_index_path, local: true do |f| %>
+  <%= form_with scope: :bill, url: bills_path, local: true do |f| %>
     <%= f.text_field :name %>
     <%= f.submit "Create" %>
   <% end %>

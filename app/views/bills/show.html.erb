@@ -1,0 +1,15 @@
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @bill.name %>
+  </p>
+
+  <h2>Items</h2>
+
+  <%= render 'items/items' %>
+
+  <h2>Add an item:</h2>
+
+  <%= render 'items/form' %>
+
+</div>

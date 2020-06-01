@@ -4,13 +4,15 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
+       <th scope="col">Amount</th>
     </tr>
   </thead>
   <tbody>
-    <% @bills.each_with_index do |bill, idx| %>
+    <% @bill.items.each_with_index do |item, idx| %>
       <tr>
-        <th scope="row"><%= idx %></th>
-        <td><%= bill.name %></td>
+        <th scope="row"><%= idx + 1%></th>
+        <td><%= item.name %></td>
+        <td><%= item.amount %></td>
       </tr>
     <% end %>
   </tbody>
