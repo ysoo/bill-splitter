@@ -19,6 +19,11 @@ class BillsController < ApplicationController
     @bills = Bill.all
   end
 
+  def calculated
+     @bill = Bill.find(params[:id])
+     @values = @bill.calculate
+  end
+
   private
 
   def bill_params

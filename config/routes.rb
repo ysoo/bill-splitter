@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :people, only: [:create, :index]
   end
 
+  get 'bills/:id/calculated', to: 'bills#calculated', as: 'calculated'
+
   get "*any", via: :all, to: "errors#not_found"
 
   root 'bills#new'
