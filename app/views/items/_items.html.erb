@@ -9,13 +9,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @bill.items.each_with_index do |item, idx| %>
-      <tr>
+    <tr>
+      <% @bill.items.each_with_index do |item, idx| %>
         <th scope="row"><%= idx + 1%></th>
         <td><%= item.name %></td>
         <td><%= item.amount %></td>
-      </tr>
-    <% end %>
+        <td><%= item.person.name %></td>
+      <% end %>
+    </tr>
       <tr><%= render 'items/form' %></tr>
   </tbody>
 </table>

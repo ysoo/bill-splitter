@@ -7,6 +7,6 @@
     <%= form.number_field :amount, class: "input-group" %>
   </td>
   <td>
-
+    <%= form.collection_select :person_id, @bill.people, :id, :name %>
   </td>
 <% end %>

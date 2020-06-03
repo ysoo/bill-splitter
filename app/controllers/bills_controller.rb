@@ -12,7 +12,7 @@ class BillsController < ApplicationController
 
   def show
     @bill = Bill.find(params[:id])
-    @people = bill.people
+    @people = @bill.people
   end
 
   def index
