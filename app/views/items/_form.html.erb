@@ -1,10 +1,10 @@
-<%= form_with(model: [@bill, @bill.items.build ], local: true) do |form| %>
+<%= form_with(model: [@bill, @bill.items.new ], local: true) do |form| %>
   <td><%= form.submit %></td>
   <td>
     <%= form.text_field :name, class: "input-group" %>
   </td>
   <td>
-    <%= form.number_field :amount, class: "input-group" %>
+    <%= form.text_field :amount, class: "input-group" %>
   </td>
   <td>
     <%= form.collection_select :person_id, @bill.people, :id, :name, class: 'input-group' %>

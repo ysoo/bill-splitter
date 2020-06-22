@@ -1,8 +1,12 @@
 class ItemsController < ApplicationController
 
+  def new
+  end
+
   def create
     @bill = Bill.find(params[:bill_id])
-    @item = @bill.items.create(item_params)
+    @item = @bill.items.new(item_params)
+    @item.save
     redirect_to bill_path(@bill)
   end
 

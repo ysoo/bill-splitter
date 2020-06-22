@@ -11,6 +11,14 @@ class Bill < ApplicationRecord
     end.to_h
   end
 
+  def total
+    sum_items + sum_percentages
+  end
+
+  def item_total
+    sum_items
+  end
+
   private
 
   def sum_person(person)
@@ -29,7 +37,7 @@ class Bill < ApplicationRecord
     return @sum_percentages if defined?(@sum_percentages)
     sum = 0.0
     percentages.each do |percentage|
-      sum += percentage.amount
+      sum += percentage.amount if percentage.amount
     end
     return @sum_percentages = sum
   end
@@ -38,7 +46,7 @@ class Bill < ApplicationRecord
     return @sum_items if defined?(@sum_items)
     sum = 0.0
     items.each do |item|
-      sum += item.amount
+      sum += item.amount if item.amount
     end
     return @sum_items = sum
   end
