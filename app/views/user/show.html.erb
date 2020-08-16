@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <strong><h1><%= @bill.name %></h1></strong>
+    </div>
+      <div class="col-auto"><%= link_to 'Calculate', calculated_path(@bill), class: "btn btn-secondary btn-lg"%></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">  <h5>Items</h5> </div>
+    <div class="col-6 col-md-4"><h5> Percentages </h5> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <%= render 'items/items' %>
+    </div>
+    <div class="col-6 col-md-4">
+      <%= render 'percentages/items' %>
+    </div>
+  </div>
+
+  <div class="row">
+    Total Item Amount:
+    $<%= @bill.item_total.to_s %>
+  </div>
+  <div class="row">
+    Total Bill Amount:
+    $<%= @bill.total.to_s %>
+  </div>
+</div>

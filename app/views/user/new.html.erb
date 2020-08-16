@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>
+    New Bill
+  </h2>
+
+  <%= form_with(url: bills_path, method: "post") do %>
+  <%= text_field_tag(:bill) %>
+  <%= submit_tag("Create") %>
+  <% end %>
+
+  <% end %>
+</div>
